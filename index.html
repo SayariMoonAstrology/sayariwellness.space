@@ -2,115 +2,182 @@
 <html>
 <head>
   <title>Sayari Moon Astrology</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: "Georgia", serif;
-      max-width: 680px;
-      margin: 80px auto;
-      padding: 0 20px;
-      line-height: 1.7;
+      font-family: "Inter", sans-serif;
+      max-width: 1000px;
+      margin: 90px auto;
+      padding: 0 28px;
+      background: #fbfaf8;
       color: #111;
-      background-color: #f8f7f5;
+      -webkit-font-smoothing: antialiased;
     }
 
-    h1 {
-      font-size: 32px;
-      font-weight: normal;
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 44px;
+      font-weight: 400;
       letter-spacing: 0.5px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 60px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 70px;
+      align-items: start;
     }
 
     h2 {
-      font-size: 18px;
-      font-weight: normal;
-      margin-top: 60px;
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #555;
+      color: #888;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      margin-bottom: 50px;
+    }
+
+    .featured {
+      border-left: 1px solid #e2e2e2;
+      padding-left: 18px;
     }
 
     p {
-      margin-bottom: 18px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #222;
+    }
+
+    .small {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
     }
 
     a {
       color: #111;
       text-decoration: none;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    a:hover {
       border-bottom: 1px solid #111;
     }
 
-    .button {
+    .link {
       display: inline-block;
-      margin-top: 30px;
-      margin-right: 10px;
-      padding: 12px 22px;
-      border: 1px solid #111;
-      text-decoration: none;
-      letter-spacing: 0.5px;
+      margin-top: 10px;
+      font-size: 14px;
     }
 
-    .button:hover {
-      background-color: #111;
-      color: #fff;
-    }
-
-    hr {
+    .divider {
       margin: 60px 0;
-      border: none;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #e6e6e6;
+    }
+
+    .footer {
+      margin-top: 90px;
+      font-size: 12px;
+      color: #888;
     }
   </style>
 </head>
 
 <body>
 
-<h1>Sayari Moon Astrology</h1>
+<div class="brand">Sayari Moon Astrology</div>
+<div class="tagline">Astrology · Timing · Interpretation</div>
 
-<p>
-A space for depth, clarity, and precise astrological interpretation.
-</p>
+<div class="grid">
 
-<p>
-I offer natal chart readings rooted in traditional astrology, with a focus on timing, lived experience, and the deeper patterns that shape a life over time.
-</p>
+  <!-- LEFT COLUMN -->
+  <div>
 
-<a class="button" href="https://calendly.com/sayarimoonastrology/60min">
-Book a Live Reading
-</a>
+    <!-- FEATURED WEEKLY -->
+    <div class="card">
+      <div class="section-label">Featured Weekly Drop</div>
 
-<a class="button" href="https://sayarimoonastrology.etsy.com/listing/4474710796/personalized-natal-chart-astrology">
-Receive a Recorded Reading
-</a>
+      <h2>Weekly Horoscopes — April 20–26</h2>
 
-<hr>
+      <div class="featured">
+        <p>
+          Mercury’s contact with Neptune, Saturn, and Mars in Aries creates a demand for heavy lifting, but we’ve somehow lost the plot. Why are we doing this again? This week moves through volatility, relational shifts, and long-range collective change as Uranus enters Gemini for the first time in decades.
+        </p>
 
-<h2>Offerings</h2>
+        <a class="link" href="weekly-horoscopes-april-2026.html">
+          Read Weekly Horoscopes →
+        </a>
+      </div>
+    </div>
 
-<p>
-<strong>Live Natal Chart Reading · $195</strong><br>
-A 1–1.5 hour private session. A focused, in-depth reading of your chart, with space for dialogue, reflection, and real-time interpretation.
-</p>
+    <!-- LATEST WRITING -->
+    <div class="card">
+      <div class="section-label">Latest Writing</div>
 
-<p>
-<strong>Recorded Natal Reading · $109</strong><br>
-A personalized recorded analysis delivered for you to revisit over time.
-</p>
+      <h2>Archive</h2>
 
-<hr>
+      <p class="small">
+        <a href="full-moon-scorpio.html">Full Moon in Scorpio — Reflection</a><br>
+        <a href="weekly-horoscopes-april-2026.html">Weekly Horoscopes — April 20–26</a><br>
+        More writing coming soon
+      </p>
+    </div>
 
-<h2>Writing</h2>
+  </div>
 
-<p>
-<a href="weekly-horoscopes-april-2026.html">
-Weekly Horoscopes — April 20–26, 2026
-</a><br>
-</p>
+  <!-- RIGHT COLUMN -->
+  <div>
 
-<h2>About</h2>
+    <div class="card">
+      <div class="section-label">Offerings</div>
 
-<p>
-Sayari Moon Astrology offers a grounded approach to astrology, drawing from traditional techniques and a close reading of the chart as a whole. The focus is on clarity, accuracy, and helping you understand the patterns that shape your experience across past, present, and what is still unfolding.
-</p>
+      <h2>Live Natal Chart Reading</h2>
+      <p class="small">
+        A 1:1 live session interpreting your natal chart through traditional astrological technique and timing-based insight.
+      </p>
+      <a class="link" href="https://calendly.com/sayarimoonastrology/60min">
+        Book Live Reading →
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>Recorded Natal Chart Reading</h2>
+      <p class="small">
+        A personalized recorded interpretation of your natal chart delivered with written depth and structured analysis.
+      </p>
+      <a class="link" href="https://sayarimoonastrology.etsy.com/listing/4474710796/personalized-natal-chart-astrology">
+        Receive Recorded Reading →
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  © Sayari Moon Astrology
+</div>
 
 </body>
 </html>
