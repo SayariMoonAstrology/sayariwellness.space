@@ -5,7 +5,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
 
- <style>
+<style>
   body {
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
@@ -91,6 +91,12 @@
     display: inline-block;
     margin-top: 10px;
     font-size: 15px;
+    color: #111;
+    text-decoration: none;
+  }
+
+  .link:hover {
+    opacity: 0.75;
   }
 
   .divider {
@@ -104,25 +110,49 @@
     color: #888;
   }
 
-  /* Latest writing styling */
-  .article-link {
-    text-decoration: none;
+  /* GLOBAL LINK RESET (fixes blue links everywhere) */
+  a {
     color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    opacity: 0.75;
+  }
+
+  /* Latest Writing / article styling */
+  .latest-writing {
+    margin-top: 10px;
+  }
+
+  .article-link {
+    display: block;
+    padding: 10px 0;
+    color: #111;
+    text-decoration: none;
   }
 
   .article-link h3 {
-    margin: 10px 0 0;
-    font-size: 18px;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: 0.2px;
   }
 
   .article-link p {
     margin: 4px 0 0;
     font-size: 15px;
     color: #666;
+    line-height: 1.6;
   }
 
- </style>
+  .article-link:hover h3 {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+</style>
 </head>
 
 <body>
