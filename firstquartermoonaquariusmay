@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>First Quarter Moon in Aquarius — Vibe Check | Sayari Moon Astrology</title>
+
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      max-width: 780px;
+      margin: 80px auto;
+      padding: 0 22px;
+      line-height: 1.75;
+      color: #111;
+      background-color: #f8f7f5;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    img.hero {
+      width: 100%;
+      max-width: 520px;
+      display: block;
+      margin: 0 auto 40px auto;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 60px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .divider {
+      margin: 60px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    a {
+      color: #111;
+      text-decoration: none;
+      border-bottom: 1px solid #111;
+    }
+
+    .back {
+      margin-top: 60px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>First Quarter Moon in Aquarius</h1>
+<div class="subtitle">Vibe Check</div>
+
+<img class="hero" src="images/mooninaquarius.png" alt="First Quarter Moon in Aquarius">
+
+<p>
+On Saturday, the Moon in Aquarius squares the Sun in Taurus, both at 19°14’. 
+Thinking about our function in community, friend groups, networks, and family dynamics, and how well these groups function for us.
+</p>
+
+<p>
+Are we growing and progressing, are we maintaining unequal power dynamics, are our efforts best focused for the good of all?
+</p>
+
+<p>
+As a collective, how can we advance if leadership is stuck on conserving outdated traditions? Is detachment a means of survival or can we stay grounded by finding pathways to self-sufficiency and building with sustainability? It may be a mix of both until we have a clearer path forward.
+</p>
+
+<h2>Reflection</h2>
+
+<p>Where am I receiving support, and what is expected in return?</p>
+
+<p>Am I staying in something because it is sustaining me, or because I do not feel ready to leave?</p>
+
+<p>What kind of systems, people, or structures am I feeding or being fed by, and does that feel sustainable or limiting?</p>
+
+<p>Where am I choosing stability over change, or what is idealistic over what I can ground and build on?</p>
+
+<p>How does my voice function authentically in the world?</p>
+
+<hr class="divider">
+
+<a class="back" href="index.html">← Back to Sayari Moon Astrology</a>
+
+</body>
+</html>
