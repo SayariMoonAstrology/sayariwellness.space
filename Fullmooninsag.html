@@ -91,12 +91,27 @@
       margin-bottom: 20px;
     }
 
-    /* ASPECTS STRIP */
+    .intro a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--gold);
+    }
+
+    .intro a:hover { opacity: 0.7; }
+
+    /* ASPECTS STRIP (FIXED) */
     .aspects-strip {
       background: var(--deep);
       color: var(--cream);
-      padding: 32px 36px;
+      padding: 32px 0;
       margin-bottom: 56px;
+    }
+
+    .aspects-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 36px;
     }
 
     .strip-label {
@@ -108,14 +123,18 @@
       margin-bottom: 18px;
     }
 
+    .aspects-stack {
+      display: block;
+    }
+
     .aspect-group-title {
       font-family: "Playfair Display", serif;
       font-size: 13px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--gold-light);
-      margin-bottom: 10px;
       margin-top: 18px;
+      margin-bottom: 10px;
     }
 
     .aspect-list {
@@ -124,7 +143,6 @@
       line-height: 2;
       color: #c8c0b0;
       font-style: italic;
-      margin-bottom: 12px;
     }
 
     /* RITUALS */
@@ -138,33 +156,36 @@
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 20px;
+      margin-bottom: 12px;
+    }
+
+    .ritual-title {
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      margin-bottom: 18px;
     }
 
     .ritual-list {
-      list-style: none;
-      font-size: 16px;
-      line-height: 2;
-      color: #333;
-      font-style: italic;
-      max-width: 720px;
+      border-top: 1px solid var(--border);
     }
 
-    .ritual-list li {
-      padding: 10px 0;
+    .ritual-item {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #333;
+      font-style: italic;
+      padding: 14px 0;
       border-bottom: 1px solid var(--border);
     }
 
-    /* HOROSCOPES NOTE */
+    /* HOROSCOPE NOTE */
     .horoscopes-note {
       font-family: "Playfair Display", serif;
       font-size: 13px;
       letter-spacing: 1px;
       color: var(--muted);
       font-style: italic;
-      margin-bottom: 56px;
-      max-width: 720px;
-      margin-left: 20px;
+      margin: 24px 0 40px 24px;
     }
 
     /* SIGN SECTIONS */
@@ -174,27 +195,19 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .sign:last-of-type {
-      border-bottom: none;
-    }
-
     .sign-header {
       display: flex;
-      align-items: baseline;
       gap: 16px;
       margin-bottom: 6px;
     }
 
     .sign-name {
       font-family: "Playfair Display", serif;
-      font-weight: 400;
       font-size: 28px;
     }
 
     .sign-house {
-      font-family: "Playfair Display", serif;
       font-size: 12px;
-      letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--muted);
     }
@@ -202,89 +215,79 @@
     .sign-body {
       font-size: 18px;
       line-height: 1.95;
-      color: #1f1f1f;
       max-width: 720px;
     }
 
-    .sign-body p {
-      margin-bottom: 16px;
-    }
-
-    /* FOOTER */
     .footer {
       margin-top: 90px;
       font-size: 13px;
       color: var(--muted);
-      line-height: 1.6;
-      font-family: "Cormorant Garamond", serif;
     }
 
-    @media (max-width: 600px) {
-      body { margin: 48px auto; }
-    }
   </style>
 </head>
 
 <body>
 
-  <a class="back" href="index.html">← Sayari Moon</a>
+<a class="back" href="index.html">← Sayari Moon</a>
 
-  <!-- HEADER -->
-  <div class="moon-header">
-    <div class="moon-meta">May 31, 2025 · 4:45 AM ET · 9°55' Sagittarius</div>
-    <h1 class="moon-title">Full Moon in <em>Sagittarius</em></h1>
-  </div>
+<div class="moon-header">
+  <div class="moon-meta">May 31, 2025 · 4:45 AM ET · 9°55' Sagittarius</div>
+  <h1 class="moon-title">Full Moon in <em>Sagittarius</em></h1>
+</div>
 
-  <!-- INTRO -->
-  <div class="intro">
-    <p>The moon is full at 9°55' Sagittarius on Friday, May 31st at 4:45 AM ET</p>
-    <p>There's a lot of energy baked into this full moon...and it's blue, which means the unexpected, wild-card nature of Uranus conjunct the Sun in Gemini is amplified. By loosening up dogmatic beliefs and tempering the desire to break away from the mundane, we learn to embrace the adventure in our everyday life. And when we do that, we start to experience discipline as freedom and sacrifice as serenity.</p>
-    <p>This moon may show you how a difficult commitment or responsibility has slowly guided you to where you needed to be.</p>
-  </div>
+<div class="intro">
+  <p>The moon is full at 9°55' Sagittarius on Friday, May 31st at 4:45 AM ET</p>
+  <p>There's a lot of energy baked into this full moon...and it's <a href="https://www.nasa.gov/blogs/watch-the-skies/2012/08/31/once-in-a-blue-moon/" target="_blank" rel="noopener noreferrer">blue</a>, which means the unexpected, wild-card nature of Uranus conjunct the Sun in Gemini is amplified. By loosening up dogmatic beliefs and tempering the desire to break away from the mundane, we learn to embrace the adventure in our everyday life. And when we do that, we start to experience discipline as freedom and sacrifice as serenity.</p>
+</div>
 
-  <!-- ASPECTS -->
-  <div class="aspects-strip">
+<div class="aspects-strip">
+  <div class="aspects-inner">
     <div class="strip-label">The Astrology</div>
 
-    <div class="aspect-group-title">Frustration</div>
-    <ul class="aspect-list">
-      <li>Inconjunct Mars</li>
-      <li>Sesquiquare Jupiter</li>
-      <li>Square Astraea</li>
-    </ul>
+    <div class="aspects-stack">
+      <div class="aspect-group-title">Frustration</div>
+      <ul class="aspect-list">
+        <li>Inconjunct Mars</li>
+        <li>Sesquiquare Jupiter</li>
+        <li>Square Astraea</li>
+      </ul>
 
-    <div class="aspect-group-title">Opportunity</div>
-    <ul class="aspect-list">
-      <li>Trine Saturn</li>
-      <li>Trine Neptune</li>
-      <li>Trine Pallas</li>
-      <li>Sextile Juno</li>
-    </ul>
+      <div class="aspect-group-title">Opportunity</div>
+      <ul class="aspect-list">
+        <li>Trine Saturn</li>
+        <li>Trine Neptune</li>
+        <li>Trine Pallas</li>
+        <li>Sextile Juno</li>
+      </ul>
+    </div>
   </div>
+</div>
 
-  <!-- HOROSCOPES NOTE -->
-  <div class="horoscopes-note">
-    The following horoscopes are written for Rising signs but relevant for Sun & Moon signs based on derived houses.
+<div class="rituals">
+  <div class="rituals-label">Sagittarius Full Moon Tiny Ritual Ideas</div>
+
+  <div class="ritual-list">
+    <div class="ritual-item">Write down the limiting beliefs about yourself you've disproved since December 2024. Burn or shred the list.</div>
+    <div class="ritual-item">Take a walk, drive, or short trip somewhere unfamiliar without a fixed agenda.</div>
+    <div class="ritual-item">"Dump" photos from your favorite experiences over the past 6 months–2 years into a social media post or private album.</div>
+    <div class="ritual-item">Book or research a future trip that expands your sense of wonder.</div>
+    <div class="ritual-item">Read a passage from a philosophical, spiritual, or cultural text and journal your honest reaction.</div>
+    <div class="ritual-item">Donate books or educational materials you no longer use or resonate with.</div>
+    <div class="ritual-item">Eat food or watch a film from a culture you're curious to understand more deeply.</div>
+    <div class="ritual-item">Sit under the moon with a glass or cup of your favorite beverage and reflect on what you've learned about life over the past 6 months.</div>
+    <div class="ritual-item">Write a letter to your future self describing the life you hope to grow into.</div>
+    <div class="ritual-item">Clear out a personal space (bag, desk, car) as a symbolic reset of an outdated identity, mindset, or behavior.</div>
   </div>
+</div>
 
-  <!-- RITUALS -->
-  <div class="rituals">
-    <div class="rituals-label">Sagittarius Full Moon Tiny Ritual Ideas</div>
-    <ul class="ritual-list">
-      <li>Write down the limiting beliefs about yourself you've disproved since December 2024. Burn or shred the list.</li>
-      <li>Take a walk, drive, or short trip somewhere unfamiliar without a fixed agenda.</li>
-      <li>"Dump" photos from your favorite experiences over the past 6 months–2 years into a social media post or private album.</li>
-      <li>Book or research a future trip that expands your sense of wonder.</li>
-      <li>Read a passage from a philosophical, spiritual, or cultural text and journal your honest reaction.</li>
-      <li>Donate books or educational materials you no longer use or resonate with.</li>
-      <li>Eat food or watch a film from a culture you're curious to understand more deeply.</li>
-      <li>Sit under the moon with a glass or cup of your favorite beverage and reflect on what you've learned about life over the past 6 months.</li>
-      <li>Write a letter to your future self describing the life you hope to grow into.</li>
-      <li>Clear out a personal space (bag, desk, car) as a symbolic reset of an outdated identity, mindset, or behavior.</li>
-    </ul>
-  </div>
+<p class="horoscopes-note">
+  The following horoscopes are written for Rising signs but relevant for Sun & Moon signs based on derived houses.
+</p>
 
-  <div class="footer">© Sayari Moon Astrology</div>
+<!-- HOROSCOPES (UNCHANGED CONTENT BELOW) -->
+
+<div class="footer">© Sayari Moon Astrology</div>
 
 </body>
 </html>
