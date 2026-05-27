@@ -78,23 +78,6 @@
       color: var(--gold);
     }
 
-    .tarot-badges {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      font-family: "Playfair Display", serif;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 5px 14px;
-    }
-
     /* INTRO */
     .intro {
       max-width: 720px;
@@ -107,15 +90,6 @@
       color: #1f1f1f;
       margin-bottom: 20px;
     }
-
-    .intro a {
-      color: var(--ink);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-color: var(--gold);
-    }
-
-    .intro a:hover { opacity: 0.7; }
 
     /* ASPECTS STRIP */
     .aspects-strip {
@@ -134,12 +108,6 @@
       margin-bottom: 18px;
     }
 
-    .aspects-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-
     .aspect-group-title {
       font-family: "Playfair Display", serif;
       font-size: 13px;
@@ -147,6 +115,7 @@
       text-transform: uppercase;
       color: var(--gold-light);
       margin-bottom: 10px;
+      margin-top: 18px;
     }
 
     .aspect-list {
@@ -155,6 +124,7 @@
       line-height: 2;
       color: #c8c0b0;
       font-style: italic;
+      margin-bottom: 12px;
     }
 
     /* RITUALS */
@@ -171,24 +141,18 @@
       margin-bottom: 20px;
     }
 
-   .ritual-list {
-  border-top: 1px solid var(--border);
-}
-
-    .ritual-item {
+    .ritual-list {
+      list-style: none;
       font-size: 16px;
-      line-height: 1.75;
+      line-height: 2;
       color: #333;
       font-style: italic;
-      padding: 14px 0 14px 0;
-      border-bottom: 1px solid var(--border);
-      padding-right: 24px;
+      max-width: 720px;
     }
 
-    .ritual-item:nth-child(even) {
-      padding-left: 24px;
-      padding-right: 0;
-      border-left: 1px solid var(--border);
+    .ritual-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     /* HOROSCOPES NOTE */
@@ -199,8 +163,8 @@
       color: var(--muted);
       font-style: italic;
       margin-bottom: 56px;
-      padding-top: 8px;
-      border-top: 1px solid var(--border);
+      max-width: 720px;
+      margin-left: 20px;
     }
 
     /* SIGN SECTIONS */
@@ -225,7 +189,6 @@
       font-family: "Playfair Display", serif;
       font-weight: 400;
       font-size: 28px;
-      letter-spacing: 0.3px;
     }
 
     .sign-house {
@@ -247,64 +210,6 @@
       margin-bottom: 16px;
     }
 
-    /* ENERGY LABELS for expanded signs */
-    .energy-label {
-      font-family: "Playfair Display", serif;
-      font-size: 10px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin: 24px 0 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .energy-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .energy-label.frustration { color: #8b4a2a; }
-    .energy-label.opportunity { color: #2a6b4a; }
-
-    .throughline-text {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 20px;
-      font-style: italic;
-      line-height: 1.8;
-      color: var(--smoke);
-      border-left: 1px solid var(--gold);
-      padding-left: 20px;
-      margin: 28px 0 0;
-      max-width: 640px;
-    }
-
-    .ritual-inline {
-      margin-top: 28px;
-      padding: 20px 24px;
-      background: #f4f2ee;
-      border-left: 1px solid var(--border);
-      max-width: 640px;
-    }
-
-    .ritual-inline-label {
-      font-family: "Playfair Display", serif;
-      font-size: 10px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .ritual-inline-text {
-      font-size: 16px;
-      font-style: italic;
-      color: #444;
-      line-height: 1.75;
-    }
-
     /* FOOTER */
     .footer {
       margin-top: 90px;
@@ -316,11 +221,6 @@
 
     @media (max-width: 600px) {
       body { margin: 48px auto; }
-      .aspects-cols { grid-template-columns: 1fr; }
-      .aspects-strip { padding: 24px 20px; }
-      .moon-title { font-size: 32px; }
-      .ritual-grid { grid-template-columns: 1fr; }
-      .ritual-item:nth-child(even) { padding-left: 0; border-left: none; }
     }
   </style>
 </head>
@@ -338,193 +238,50 @@
   <!-- INTRO -->
   <div class="intro">
     <p>The moon is full at 9°55' Sagittarius on Friday, May 31st at 4:45 AM ET</p>
-    <p>There's a lot of energy baked into this full moon...and it's <a href="https://www.nasa.gov/blogs/watch-the-skies/2012/08/31/once-in-a-blue-moon/" target="_blank" rel="noopener noreferrer">blue</a>, which means the unexpected, wild-card nature of Uranus conjunct the Sun in Gemini is amplified. By loosening up dogmatic beliefs and tempering the desire to break away from the mundane, we learn to embrace the adventure in our everyday life. And when we do that, we start to experience discipline as freedom and sacrifice as serenity.</p>
+    <p>There's a lot of energy baked into this full moon...and it's blue, which means the unexpected, wild-card nature of Uranus conjunct the Sun in Gemini is amplified. By loosening up dogmatic beliefs and tempering the desire to break away from the mundane, we learn to embrace the adventure in our everyday life. And when we do that, we start to experience discipline as freedom and sacrifice as serenity.</p>
     <p>This moon may show you how a difficult commitment or responsibility has slowly guided you to where you needed to be.</p>
   </div>
 
-  <!-- ASPECTS STRIP -->
+  <!-- ASPECTS -->
   <div class="aspects-strip">
     <div class="strip-label">The Astrology</div>
-    <div class="aspects-cols">
-      <div>
-        <div class="aspect-group-title">Frustration</div>
-        <ul class="aspect-list">
-          <li>Inconjunct Mars</li>
-          <li>Sesquiquare Jupiter</li>
-          <li>Square Astraea</li>
-        </ul>
-      </div>
-      <div>
-        <div class="aspect-group-title">Opportunity</div>
-        <ul class="aspect-list">
-          <li>Trine Saturn</li>
-          <li>Trine Neptune</li>
-          <li>Trine Pallas</li>
-          <li>Sextile Juno</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <!-- ENERGY OVERVIEW -->
-  <div class="intro" style="margin-bottom: 56px;">
-    <div class="energy-label frustration">Frustration</div>
-    <p>Restlessness is high, with a strong desire for freedom, growth, and something out of the ordinary, but what you get may not match the version of "adventure" you were hoping for... it may feel uncomfortable, disruptive, or far outside your usual sense of identity. This can create irritability and resistance. Without patience, there's a tendency to push too far to feel movement or novelty. There may be a sense of wanting to escape your current circumstances due to feeling like your life path should look very different from what you're experiencing now.</p>
-    <div class="energy-label opportunity">Opportunity</div>
-    <p>There is real endurance available to do what's required to move toward where you're meant to be. It becomes clearer now who and what you can rely on for long-term stability. Insight may come through dreams, intuition, or reflective practices that help you understand the meaning behind current challenges. While the path may take more time or effort than expected, it is within your capacity. Strategic and creative thinking are especially powerful now, and tension can be resolved through patience, diplomacy, and wisdom. In some cases, a former conflict or intellectual opposition may transform into mutual respect, alliance, or even attraction over time. This is a dynamic that evolves through understanding but won't respond to force.</p>
-  </div>
+    <div class="aspect-group-title">Frustration</div>
+    <ul class="aspect-list">
+      <li>Inconjunct Mars</li>
+      <li>Sesquiquare Jupiter</li>
+      <li>Square Astraea</li>
+    </ul>
 
- <div class="ritual-list">
-  <div class="ritual-item">Write down the limiting beliefs about yourself you've disproved since December 2024. Burn or shred the list.</div>
-  <div class="ritual-item">Take a walk, drive, or short trip somewhere unfamiliar without a fixed agenda.</div>
-  <div class="ritual-item">"Dump" photos from your favorite experiences over the past 6 months–2 years into a social media post or private album.</div>
-  <div class="ritual-item">Book or research a future trip that expands your sense of wonder.</div>
-  <div class="ritual-item">Read a passage from a philosophical, spiritual, or cultural text and journal your honest reaction.</div>
-  <div class="ritual-item">Donate books or educational materials you no longer use or resonate with.</div>
-  <div class="ritual-item">Eat food or watch a film from a culture you're curious to understand more deeply.</div>
-  <div class="ritual-item">Sit under the moon with a glass or cup of your favorite beverage and reflect on what you've learned about life over the past 6 months.</div>
-  <div class="ritual-item">Write a letter to your future self describing the life you hope to grow into.</div>
-  <div class="ritual-item">Clear out a personal space (bag, desk, car) as a symbolic reset of an outdated identity, mindset, or behavior.</div>
-</div>
+    <div class="aspect-group-title">Opportunity</div>
+    <ul class="aspect-list">
+      <li>Trine Saturn</li>
+      <li>Trine Neptune</li>
+      <li>Trine Pallas</li>
+      <li>Sextile Juno</li>
+    </ul>
+  </div>
 
   <!-- HOROSCOPES NOTE -->
-  <p class="horoscopes-note">The following horoscopes are written for Rising signs but relevant for Sun &amp; Moon signs based on derived houses.</p>
-
-  <!-- ARIES -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Aries</span>
-      <span class="sign-house">Rising · 9H</span>
-    </div>
-    <div class="sign-body">
-      <p>Closing out a chapter through a travel experience, graduation, or the integration of lessons learned over the past six months. Much of your recent focus may have involved crossing your t's: handling paperwork, logistics, or other tedious responsibilities connected to a bigger plan in your life. Be mindful of hidden costs or conflicts surrounding how you earn or spend money in unfamiliar terrain, especially if you're trying to monetize knowledge or skills you've recently developed.</p>
-      <p>Part of your growth now involves realizing that the sweetest freedom often arrives after much preparation and discipline. Your search for inner peace may hit a few bumps, but the process of discovery is more exciting and meaningful because of it. The good news is that the self-discipline you've been building has prepared you for this moment. You also carry a magnetic confidence right now that can attract unexpected but exhilarating experiences.</p>
-    </div>
+  <div class="horoscopes-note">
+    The following horoscopes are written for Rising signs but relevant for Sun & Moon signs based on derived houses.
   </div>
 
-  <!-- TAURUS -->
-<div class="sign">
-  <div class="sign-header">
-    <span class="sign-name">Taurus</span>
-    <span class="sign-house">Rising · 8H</span>
-  </div>
-  <div class="sign-body">
-    <p>Hidden tension, either sexual or financial, could break in a close relationship. Let your emotional intelligence guide you in saying what’s true while avoiding hurt feelings. Going public with a partnership or professional decision that requires embracing quirks you previously hid from view may be the key to diminishing the power public opinion holds over you. The idea of what you need to be or do in your current reality is determined by you and you alone. This includes who you are attracted to, which is allowed to evolve with you over time.</p>
-  </div>
-</div>
-
-  <!-- GEMINI -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Gemini</span>
-      <span class="sign-house">Rising · 7H</span>
-    </div>
-    <div class="sign-body">
-      <p>A relationship matter may need to be addressed, especially if you feel like there's hidden tension or undisclosed emotions around where things are headed. A sudden change of heart may occur after questioning the value of a commitment you are weighing. Listening to information from everyday sources or advice from your inner circle could bring in the big-picture perspective you've had a hard time seeing for yourself. Once you're clearer on the meaning you want to create in life, you'll be guided to the right long-term commitments.</p>
-    </div>
-  </div>
-
-  <!-- CANCER -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Cancer</span>
-      <span class="sign-house">Rising · 6H</span>
-    </div>
-    <div class="sign-body">
-      <p>Restlessness stirs in the mundanity of your daily routine, especially work tasks. You may feel you're just doing what you've got to do to get to where you're going. Escapism beckons, but meditation or spiritual practices can prevent self-sabotage. Recognition for the work you've put in so far will keep you working towards a dream you're hoping to realize. Your current investments hold the power to slowly, but dramatically, transform your circumstances. Patience will get you everywhere.</p>
-    </div>
-  </div>
-
-  <!-- LEO -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Leo</span>
-      <span class="sign-house">Rising · 5H</span>
-    </div>
-    <div class="sign-body">
-      <p>You need to let loose under this moon. A creative idea may be ripe — be it related to children or a personal project, it's time to let it be seen and heard. You may wish to do a temperature check to see how it's received, but the reception will surprise you if you just let it be what it is. Authentic expression and experimentation are key for you now, so you'll have to learn to manage opinions from the peanut gallery. But someone in your network may surprise you with insights you hadn't considered before.</p>
-    </div>
-  </div>
-
-  <!-- VIRGO -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Virgo</span>
-      <span class="sign-house">Rising · 4H</span>
-    </div>
-    <div class="sign-body">
-      <p>Recent changes in your career have led you to a moment of personal truth. Whether it's a long-distance move manifesting or a publicity stunt you can't come back from, you will have to be brutally honest with yourself and those closest to you. If you've been going through legal issues, especially related to debt, there's an opportunity to confront the reality of it. Whatever honesty you're willing to bring to the table now assists you in untangling inherited pain that influences how you present yourself to the world.</p>
-    </div>
-  </div>
-
-  <!-- LIBRA -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Libra</span>
-      <span class="sign-house">Rising · 3H</span>
-    </div>
-    <div class="sign-body">
-      <p>Your plans for adventure and exploration may require more tedious upfront tasks than you anticipated. If financial setbacks have left you disenchanted, a partner may offer grounding support while also fueling excitement in awakening your desires for pleasure, fantasy, or taboo. That boredom won't resolve itself. Wrap up your must-dos and permit yourself to lean into the unknown.</p>
-    </div>
-  </div>
-
-  <!-- SCORPIO -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Scorpio</span>
-      <span class="sign-house">Rising · 2H</span>
-    </div>
-    <div class="sign-body">
-      <p>It's time to get raw and real about finances, self-worth, intimacy, and power dynamics in relationships. Some things should remain behind closed doors, but in the right company, the truth really can set you free. If stress in a relationship has become overbearing, direct communication will be far more productive than lashing out or arguing to prove your worth. The same applies to professional situations where your value is not being properly compensated.</p>
-      <p>"Show, don't tell" is the perfect motto right now — but your self-esteem should be rooted in how consistently you show up for yourself and the people who matter to you. If you're being repeatedly disrespected, it may be time to let go.</p>
-    </div>
-  </div>
-
-  <!-- SAGITTARIUS -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Sagittarius</span>
-      <span class="sign-house">Rising · 1H</span>
-    </div>
-    <div class="sign-body">
-      <p>A reminder to prioritize yourself and your well-being comes through now. You may have been consumed by a partner's needs or the belief that rest and leisure must be earned through persistent effort — but you're encouraged to take fun more seriously. Joy and adventure are not distractions but what keep you going, Sag. Allowing others to pile their burdens on you will only build resentment over time.</p>
-      <p>You may feel far away from a spiritual center, calling, or sense of home and working hard to find your way back. But this feeling you're seeking can be cultivated within. Spending time on yourself, exercising, meditating, and prioritizing your health will help restore your sense of direction and inner peace.</p>
-    </div>
-  </div>
-
-  <!-- CAPRICORN -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Capricorn</span>
-      <span class="sign-house">Rising · 12H</span>
-    </div>
-    <div class="sign-body">
-      <p>You need some time to decompress from recent ups, downs, and disruptions in your daily routine. Taking time to reflect could lead to acknowledging the unadorned truth about a partnership or what you really need from one. If something is missing, it will make itself known through a persistent gnawing feeling you can't ignore. It's time to speak what's on your heart so your mind can rest.</p>
-      <p>Avoiding confrontation only feeds disempowerment, while speaking unfiltered helps restore your sense of self-esteem and security. This energy could also relate to a chaotic or stressful work situation that's reaching its culmination now.</p>
-    </div>
-  </div>
-
-  <!-- AQUARIUS -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Aquarius</span>
-      <span class="sign-house">Rising · 11H</span>
-    </div>
-    <div class="sign-body">
-      <p>It may be time for emotional honesty within a friend group or wider network. You could find yourself in the spotlight, or feel put on the spot by someone who wants to know where you've been, what you've been up to, and what your plans are. Alternatively, an opportunity may present itself, but financial limitations or home responsibilities could prevent you from pursuing it in the independent way you'd prefer.</p>
-      <p>You are moving through a period of powerful personal transformation, so aligning yourself with the right communities, audiences, and networks becomes increasingly important. The right company can help expand your vision, while lingering in the wrong environments will feel increasingly draining or restrictive. If you're working in sales, marketing, or a creative field, this is an opportune time to refine your message and seek platforms that reflect your ideals and reach your target audience. Reflecting on expired identities and associations you're ready to release will support you in moving forward with less emotional baggage.</p>
-    </div>
-  </div>
-
-  <!-- PISCES -->
-  <div class="sign">
-    <div class="sign-header">
-      <span class="sign-name">Pisces</span>
-      <span class="sign-house">Rising · 10H</span>
-    </div>
-    <div class="sign-body">
-      <p>You may be asked to confront hidden fears or subconscious influences that distort your self-perception. There could be an overwhelming desire to escape the pressure of a public or professional situation — but if you've already learned how to navigate instability in your personal life with discipline and composure, you can bring that same grounded energy into this moment. Tempering the urge to crash out with maturity and wisdom will serve your reputation far better in the long run. Handling a difficult situation with grace could unexpectedly bring in a more fun, creative, or exciting opportunity.</p>
-    </div>
+  <!-- RITUALS -->
+  <div class="rituals">
+    <div class="rituals-label">Sagittarius Full Moon Tiny Ritual Ideas</div>
+    <ul class="ritual-list">
+      <li>Write down the limiting beliefs about yourself you've disproved since December 2024. Burn or shred the list.</li>
+      <li>Take a walk, drive, or short trip somewhere unfamiliar without a fixed agenda.</li>
+      <li>"Dump" photos from your favorite experiences over the past 6 months–2 years into a social media post or private album.</li>
+      <li>Book or research a future trip that expands your sense of wonder.</li>
+      <li>Read a passage from a philosophical, spiritual, or cultural text and journal your honest reaction.</li>
+      <li>Donate books or educational materials you no longer use or resonate with.</li>
+      <li>Eat food or watch a film from a culture you're curious to understand more deeply.</li>
+      <li>Sit under the moon with a glass or cup of your favorite beverage and reflect on what you've learned about life over the past 6 months.</li>
+      <li>Write a letter to your future self describing the life you hope to grow into.</li>
+      <li>Clear out a personal space (bag, desk, car) as a symbolic reset of an outdated identity, mindset, or behavior.</li>
+    </ul>
   </div>
 
   <div class="footer">© Sayari Moon Astrology</div>
