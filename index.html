@@ -2,219 +2,256 @@
 <html>
 <head>
   <title>Sayari Moon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<style>
-body {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 400;
-  max-width: 1000px;
-  margin: 90px auto;
-  padding-left: 28px;
-  padding-right: 28px;
-  background: #fbfaf8;
-  color: #111;
-  -webkit-font-smoothing: antialiased;
-  font-size: 18px;
-  line-height: 1.85;
-  letter-spacing: 0.1px;
-}
+    :root {
+      --cream: #fbfaf8;
+      --ink: #111;
+      --muted: #888;
+      --border: #e2e2e2;
+      --deep: #1a1208;
+      --gold: #b8922a;
+      --gold-light: #d4aa4a;
+    }
 
-.tagline {
-  font-size: 17px;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: #333;
-  margin: 8px 0 60px 0;
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-}
+    body {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      max-width: 1000px;
+      margin: 90px auto;
+      padding: 0 28px;
+      background: var(--cream);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      font-size: 18px;
+      line-height: 1.85;
+      letter-spacing: 0.1px;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1.7fr 1fr;
-  gap: 70px;
-  align-items: start;
-}
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 0;
+    }
 
-h1, h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-}
+    .tagline {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 18px 0 64px 0;
+    }
 
-h2 {
-  font-size: 20px;
-  margin-bottom: 14px;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 70px;
+      align-items: start;
+    }
 
-.section-label {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #888;
-  margin-bottom: 14px;
-}
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: 0.3px;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
 
-.card {
-  margin-bottom: 50px;
-}
+    .section-label {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
 
-.featured {
-  border-left: 1px solid #e2e2e2;
-  padding-left: 18px;
-}
+    .card {
+      margin-bottom: 52px;
+    }
 
-p {
-  font-size: 19px;
-  line-height: 1.9;
-  color: #1f1f1f;
-}
+    /* Featured card with dark left bar like the moonscopes astrology strip */
+    .featured-card {
+      border-left: 3px solid var(--deep);
+      padding-left: 20px;
+    }
 
-.small {
-  font-size: 17px;
-  line-height: 1.75;
-  color: #2a2a2a;
-}
+    .featured-card p {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #1f1f1f;
+      font-style: italic;
+      margin-bottom: 14px;
+    }
 
-.link {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 15px;
-  color: #111;
-  text-decoration: none;
-}
+    p {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #1f1f1f;
+    }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    .small {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #444;
+    }
 
-a:hover {
-  opacity: 0.75;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.article-link {
-  display: block;
-  padding: 10px 0;
-}
+    a:hover { opacity: 0.7; }
 
-.article-link h3 {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  font-size: 18px;
-  margin: 0;
-}
+    .link {
+      display: inline-block;
+      margin-top: 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
 
-.article-link p {
-  margin: 4px 0 0;
-  font-size: 15px;
-  color: #666;
-}
+    /* Gold underline on arrow links to match moonscopes gold accent */
+    .link::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: var(--gold);
+      margin-top: 2px;
+      width: 100%;
+    }
 
-.footer {
-  margin-top: 90px;
-  font-size: 13px;
-  color: #888;
-  line-height: 1.6;
-}
+    /* Article links */
+    .article-link {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
 
-.banner {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-</style>
+    .article-link:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .article-link h3 {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: 18px;
+      margin: 0 0 4px;
+    }
+
+    .article-link p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* Right column offerings */
+    .offering-card {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .offering-card:last-of-type {
+      border-bottom: none;
+    }
+
+    /* Moon phase accent for featured drop */
+    .moon-accent {
+      font-family: "Playfair Display", serif;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      margin-top: 90px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; gap: 0; }
+      body { margin: 48px auto; }
+    }
+  </style>
 </head>
 
 <body>
 
-<img src="images/sayarimoonwebsitebanner.png" class="banner">
+  <img src="images/sayarimoonwebsitebanner.png" class="banner">
 
-<div class="tagline">Astrology · Cycles · Symbols</div>
+  <div class="tagline">Astrology · Cycles · Symbols</div>
 
-<div class="grid">
+  <div class="grid">
 
-  <!-- LEFT COLUMN -->
-  <div>
+    <!-- LEFT COLUMN -->
+    <div>
 
-    <!-- Featured Weekly Drop -->
-    <div class="card">
-      <div class="section-label">Featured Weekly Drop</div>
+      <div class="card">
+        <div class="section-label">Featured Weekly Drop</div>
+        <div class="moon-accent">Full Moon in Sagittarius · May 31</div>
+        <h2>Set the Record Straight, Then Let it TF Go</h2>
+        <div class="featured-card">
+          <p>Set the record straight under a disruptive Full Moon in Sagittarius...</p>
+          <a class="link" href="fullmooninsagittariushoroscopes.html">Read Weekly Forecast →</a>
+        </div>
+      </div>
 
-      <h2>Set the Record Straight, Then Let it TF Go</h2>
-
-      <div class="featured">
-        <p>
-         Set the record straight under a disruptive Full Moon in Sagittarius...
-        </p>
-
-        <a class="link" href="fullmooninsagittariushoroscopes.html">
-          Read Weekly Forecast →
+      <div class="card">
+        <div class="section-label">Latest Writing</div>
+        <a href="uranusingemini.html" class="article-link">
+          <h3>Uranus in Gemini by Rising Sign</h3>
         </a>
       </div>
+
     </div>
 
-    <!-- Latest Writing -->
-    <div class="card">
-      <div class="section-label">Latest Writing</div>
+    <!-- RIGHT COLUMN -->
+    <div>
 
-      <a href="uranusingemini.html" class="article-link">
-        <h3>Uranus in Gemini by Rising Sign</h3>
-      </a>
-    </div>
-
-  </div>
-
-  <!-- RIGHT COLUMN -->
-  <div>
-
-    <div class="card">
       <div class="section-label">Offerings</div>
 
-      <h2>Live Natal Chart Reading</h2>
-      <p class="small">
-        A 1:1 live session interpreting your natal chart.
-      </p>
+      <div class="offering-card">
+        <h2>Live Natal Chart Reading</h2>
+        <p class="small">A 1:1 live session interpreting your natal chart.</p>
+        <a class="link" href="https://calendly.com/sayarimoonastrology/60min" target="_blank" rel="noopener noreferrer">Book Live Reading →</a>
+      </div>
 
-      <a class="link" href="https://calendly.com/sayarimoonastrology/60min" target="_blank" rel="noopener noreferrer">
-        Book Live Reading →
-      </a>
-    </div>
+      <div class="offering-card">
+        <h2>Recorded Natal Chart Reading</h2>
+        <p class="small">Personalized recorded interpretation of your natal chart.</p>
+        <a class="link" href="https://sayarimoonastrology.etsy.com/listing/4474710796/personalized-natal-chart-astrology" target="_blank" rel="noopener noreferrer">Receive Recorded Reading →</a>
+      </div>
 
-    <div class="card">
-      <h2>Recorded Natal Chart Reading</h2>
-      <p class="small">
-        Personalized recorded interpretation of your natal chart.
-      </p>
+      <div class="offering-card">
+        <div class="section-label">Join the List</div>
+        <h2>Weekly Horoscopes</h2>
+        <p class="small">Subscribe via Substack for updates.</p>
+        <a class="link" href="https://substack.com/@sayarimoon" target="_blank" rel="noopener noreferrer">Subscribe →</a>
+      </div>
 
-      <a class="link" href="https://sayarimoonastrology.etsy.com/listing/4474710796/personalized-natal-chart-astrology" target="_blank" rel="noopener noreferrer">
-        Receive Recorded Reading →
-      </a>
-    </div>
-
-    <div class="card">
-      <div class="section-label">Join the List</div>
-
-      <h2>Weekly Horoscopes</h2>
-
-      <p class="small">
-        Subscribe via Substack for updates.
-      </p>
-
-      <a class="link" href="https://substack.com/@sayarimoon" target="_blank" rel="noopener noreferrer">
-        Subscribe →
-      </a>
     </div>
 
   </div>
 
-</div>
-
-<div class="footer">
-  © Sayari Moon Astrology
-</div>
+  <div class="footer">© Sayari Moon Astrology</div>
 
 </body>
 </html>
