@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This Week's Sky Notes: June 1–7 · Sayari Moon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fbfaf8;
+      --ink: #111;
+      --muted: #888;
+      --border: #e2e2e2;
+      --deep: #1a1208;
+      --gold: #b8922a;
+      --gold-light: #d4aa4a;
+      --smoke: #2e2618;
+    }
+
+    body {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      max-width: 1000px;
+      margin: 90px auto;
+      padding: 0 28px;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .back {
+      font-family: "Playfair Display", serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 48px;
+    }
+
+    .moon-header {
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 0 20px;
+      margin-bottom: 10px;
+    }
+
+    .moon-meta {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .moon-title {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.1;
+      letter-spacing: 0.3px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .moon-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .moon-subtitle {
+      font-family: "Playfair Display", serif;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    /* TRANSIT SECTIONS */
+    .transit-section {
+      margin-bottom: 56px;
+    }
+
+    .transit-label {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .transit-block {
+      margin-bottom: 48px;
+    }
+
+    .transit-title {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .transit-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .transit-dates {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .transit-body {
+      font-size: 18px;
+      line-height: 1.95;
+      max-width: 720px;
+    }
+
+    .transit-body p {
+      margin-bottom: 16px;
+    }
+
+    .transit-note {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 17px;
+      margin-top: 8px;
+    }
+
+    /* HOROSCOPES */
+    .sign {
+      margin-bottom: 72px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sign-header {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 6px;
+      align-items: baseline;
+    }
+
+    .sign-name {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+    }
+
+    .sign-house {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .sign-body {
+      font-size: 18px;
+      line-height: 1.95;
+    }
+
+    .footer {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 48px 0 72px;
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="back" href="index.html">← Sayari Moon</a>
+
+<div class="moon-header">
+  <h1 class="moon-title">This Week's <em>Sky Notes</em></h1>
+  <div class="moon-subtitle">June 1st – 7th</div>
+</div>
+
+<!-- MAJOR TRANSIT -->
+<div class="transit-section">
+  <div class="transit-label">Major Transit</div>
+
+  <div class="transit-block">
+    <div class="transit-dates">June 1 – August 9</div>
+    <div class="transit-title">Mercury in <em>Cancer</em></div>
+    <div class="transit-body">
+      <p>Mercury entered Cancer today, where it will retrograde at the end of the month and remain until August. Start journaling now about whatever feelings come up, so you can revisit those later.</p>
+      <p>Mercury in Cancer, now co-present with Venus and Jupiter, pulls us into our most sincere, vulnerable ways of communicating. This comes through words and acts that are nurturing and protective. In the most nostalgic sign of the zodiac, wading through memories becomes intuitive, instinctual and necessary. It's a time for reunion, both in spirit and practice, calling us to honor our emotional integrity. This includes contending with tendencies toward excessive detachment or sentimentality. The retrograde phase is an especially opportune time for reconciling these extremes.</p>
+      <p>Jupiter's year-long transit through Cancer has been about expanding our capacity to hold emotions, no matter whose they are or what they look like. It has offered opportunities to confront our emotional integrity: bringing up memories, reconnecting us with people from the past, drawing us closer to family, and testing us in caretaking roles. Venus here since May 19th is presenting opportunities to relate within this wisdom. With Mercury, expect more conversations about emotional bonds especially involving family (biological and chosen). Expect invitations to gatherings and community events, and sincere communication around emotions that are hard to contain.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MINOR TRANSITS -->
+<div class="transit-section">
+  <div class="transit-label">Minor Transits</div>
+
+  <div class="transit-block">
+    <div class="transit-dates">June 1 – 3</div>
+    <div class="transit-title">Sun in <em>Gemini</em> Sextile Saturn in Aries</div>
+    <div class="transit-body">
+      <p>This transit brings support from taking initiative with things you don't feel like doing. You might notice how the tedious work done begrudgingly has slowly improved your day-to-day life or how discipline in one area opens space for more play and excitement in another. Experimentation and curiosity may also lead to a long-term interest.</p>
+    </div>
+  </div>
+
+  <div class="transit-block">
+    <div class="transit-dates">June 2 – 3</div>
+    <div class="transit-title">Mercury in <em>Cancer</em> Trine N. Node in Pisces</div>
+    <div class="transit-body">
+      <p>This is excellent energy to seek out support you need, especially in health and wellness. You may meet someone who feels familiar or has information that's key to your future. A heart-opening conversation with a stranger can bring perspective on deep feelings. An idea comes to you at the right time, in the right place, in front of the right audience.</p>
+      <p class="transit-note">Pay attention: messages, conversations, or ideas could lead to a gateway. You may be the messenger or the recipient.</p>
+    </div>
+  </div>
+
+  <div class="transit-block">
+    <div class="transit-dates">June 3</div>
+    <div class="transit-title">Mercury in <em>Cancer</em> Square Neptune in Aries</div>
+    <div class="transit-body">
+      <p>Something that seems too good to be true may prove to be exactly that. Information may not arrive through clear communication, but through intuition and symbolic or spiritual cues. If you can stay grounded in your thinking, a solution is likely to find its way through the fog.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer">© Sayari Moon Astrology</div>
+
+</body>
+</html>
