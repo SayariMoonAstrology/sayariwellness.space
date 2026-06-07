@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Moon in Gemini · Sayari Moon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fbfaf8;
+      --ink: #111;
+      --muted: #888;
+      --border: #e2e2e2;
+      --deep: #1a1208;
+      --gold: #b8922a;
+      --gold-light: #d4aa4a;
+      --smoke: #2e2618;
+    }
+
+    body {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      max-width: 1000px;
+      margin: 90px auto;
+      padding: 0 28px;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .back {
+      font-family: "Playfair Display", serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 48px;
+    }
+
+    .moon-header {
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 0 20px;
+      margin-bottom: 10px;
+    }
+
+    .moon-meta {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .moon-title {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.1;
+      letter-spacing: 0.3px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .moon-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .moon-subtitle {
+      font-family: "Playfair Display", serif;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .moon-time {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin-bottom: 56px;
+      font-size: 19px;
+    }
+
+    .aspects-strip {
+      background: var(--deep);
+      color: var(--cream);
+      padding: 32px 36px;
+      margin: 0 0 56px 0;
+      max-width: 860px;
+    }
+
+    .strip-label {
+      font-family: "Playfair Display", serif;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .aspect-block {
+      margin-bottom: 28px;
+    }
+
+    .aspect-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .aspect-group-title {
+      font-family: "Playfair Display", serif;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+    }
+
+    .aspect-list {
+      list-style: none;
+      font-size: 16px;
+      line-height: 2;
+      color: #c8c0b0;
+      font-style: italic;
+    }
+
+    .aspect-text {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #c8c0b0;
+      font-style: italic;
+    }
+
+    .rituals {
+      margin-bottom: 72px;
+    }
+
+    .rituals-title {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .ritual-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .ritual-item {
+      font-size: 16px;
+      line-height: 1.75;
+      font-style: italic;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sign {
+      margin-bottom: 72px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sign-header {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .sign-name {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+    }
+
+    .sign-house {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .sign-body {
+      font-size: 18px;
+      line-height: 1.95;
+    }
+
+    .footer {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="back" href="index.html">← Sayari Moon</a>
+
+<div class="moon-header">
+  <h1 class="moon-title">New Moon in <em>Gemini</em></h1>
+  <div class="moon-subtitle">When the Heart and Mind Finally Agree</div>
+    <div class="moon-meta">June 14, 2026 · 10:54 PM ET · 24°3' Gemini</div>
+</div>
+
+<div class="intro">
+  <p>Our first New Moon in Gemini since Uranus entered the sign on April 25th brings an opportunity to process its initial shakeups and liberate how we think about the areas of life it's disrupting. New information contradicts previously binding truths. It challenges what was written in stone by the experts and the gurus before. There's an opening here to learn more, to experiment with the truth and draw new conclusions. This is especially true in our partnerships and commitments. Explore new ways of relating based in community, intellectual intimacy, and forward-thinking ideals.</p>
+  <br>
+  <p>Let's break it down…</p>
+</div>
+
+<div class="aspects-strip">
+  <div class="strip-label">The Astrology</div>
+
+  <div class="aspect-block">
+    <div class="aspect-group-title">Frustration</div>
+    <div class="aspect-row">
+      <ul class="aspect-list">
+        <li>Opposite Black Moon Lilith in Sagittarius</li>
+        <li>Sesquisquare Juno in Aquarius</li>
+      </ul>
+      <div class="aspect-text">
+        An emotional reliance on consistent information gets destabilized now as what you thought you could trust feels increasingly uncertain. The burden of truth becomes heavy, and you may find yourself at a crossroads between self-betrayal and saying something brutally honest to someone else. A quiet exhaustion around self-sacrifice may also surface, especially if you've been carrying more than your share to keep the peace.
+      </div>
+    </div>
+  </div>
+
+  <div class="aspect-block">
+    <div class="aspect-group-title">Opportunity</div>
+    <div class="aspect-row">
+      <ul class="aspect-list">
+        <li>Mutual reception with Mercury in Cancer</li>
+      </ul>
+      <div class="aspect-text">
+        The head and the heart are on the same page. Emotional truth is also intellectual honesty. Expressing your emotions authentically doesn't require as much effort or explanation as usual. You can speak plainly.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rituals">
+  <div class="rituals-title">Gemini New Moon Tiny Ritual Ideas</div>
+  <div class="ritual-list">
+    <div class="ritual-item">Initiate a conversation you've been avoiding or ask a question you've been hesitant to.</div>
+    <div class="ritual-item">Take a walk around your neighborhood or through a nearby park with your phone put away. Pay attention to what you overhear or any changes you observe.</div>
+    <div class="ritual-item">Send a message to a sibling (or someone who feels like one) to check in, catch up, or say something you've left unsaid.</div>
+    <div class="ritual-item">Spend time with your hands. Write longhand, draw, organize, or make something. Let the body lead where the mind has been stuck.</div>
+    <div class="ritual-item">Visit a library, bookstore, or anywhere ideas live. Browse without an agenda and see what finds you.</div>
+  </div>
+</div>
+
+<p style="font-family: 'Playfair Display', serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 56px;">The following horoscopes are written for Rising signs but relevant for Sun & Moon signs based on derived houses.</p>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Aries</span><span class="sign-house">Rising · 3H</span></div><div class="sign-body"><p>There's a lot to learn under this moon. You may be dealing with paperwork or negotiations or just taking in new information from your surroundings that challenge previous assumptions. You may feel like you don't have to be bound to any place or way of thinking approaching your goals and who you build them with. You may also receive insights about removing toxins in your home or familial relationships.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Taurus</span><span class="sign-house">Rising · 2H</span></div><div class="sign-body"><p>Information about a new way of earning may find its way to you, but it could challenge you to embrace a deeper, more intimate truth or transformation happening within yourself. This extends beyond your relationship with yourself; partnerships that impact your professional goals or social status are also in play. If you're feeling confined in any relationship, it's a perfect time to establish boundaries in the name of self-care.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Gemini</span><span class="sign-house">Rising · 1H</span></div><div class="sign-body"><p>Some form of stress, especially related to an intimate partnership, may be lessening now. A trip or unusual experience could enlighten you to the type of partnership that you need, and a sincere talk about your needs moving forward could help put an end to what has been a pressure point. Your need to prioritize personal and financial wellness is central to the conversation.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Cancer</span><span class="sign-house">Rising · 12H</span></div><div class="sign-body"><p>Now is a good time to rest, meditate, and take in information that improves your mental and physical health. A new wellness practice could help you tackle a recurring issue and, as a result, increase your self-confidence. A sincere, open conversation with your journal or someone close to you is a simple remedy to ease your mind.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Leo</span><span class="sign-house">Rising · 11H</span></div><div class="sign-body"><p>You may be feeling more social around this moon, ready to put some feelers out for social meetups and dates. It's a good time to link up with someone you haven't seen in a while and find out what they've been up to. An old flame may reappear as well, offering new insight into why things didn't work out and greater clarity on what kind of bonds you want to form and maintain going forward.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Virgo</span><span class="sign-house">Rising · 10H</span></div><div class="sign-body"><p>Ideas around an image you wish to portray, professional or otherwise, may shift around this moon. It could feel like the service you provide day-to-day doesn't align with who you think you are. Tension lies between teachings from your upbringing or a role you've played in a family structure and what new ideas or groups you wish to associate yourself with. Joining a new network can help you accomplish professional goals and step into an image that better reflects your truth.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Libra</span><span class="sign-house">Rising · 9H</span></div><div class="sign-body"><p>Something new and exciting may grab your attention under this moon. This could be linked to a work opportunity or a personal venture. If you've been shifting toward work in spiritual, healing, or social justice fields, you could find the right course or teacher. If you've been holding your tongue regarding personal convictions, this new moon might be the day that your truth unshackles you.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Scorpio</span><span class="sign-house">Rising · 8H</span></div><div class="sign-body"><p>Self-mastery comes through clarity in principles and values in life. Whether it's building intimacy through financial trust in your relationship or simply learning to trust your own intuition, how you manage power — financial, sexual, and spiritual — is set to shift significantly. Creating a financial plan that empowers your future self is a good idea under this moon.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Sagittarius</span><span class="sign-house">Rising · 7H</span></div><div class="sign-body"><p>It's important that a partnership doesn't force you to sacrifice any part of who you are or restrict your freedom. Under this moon, you may replace a definition of compromise equating to losses in self-expression and identity with one that brings an opportunity to build intimacy in important relationships. A vulnerable conversation around this could take place.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Capricorn</span><span class="sign-house">Rising · 6H</span></div><div class="sign-body"><p>You might find the urge to reorganize a part of your everyday life. This could mean considering a new diet or exercise regimen, or analyzing how a partnership contributes to your wellbeing, for better or worse. If something you've been trying to maintain is becoming a headache, the opportunity to replace it with a better practice could arrive.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Aquarius</span><span class="sign-house">Rising · 5H</span></div><div class="sign-body"><p>Enjoy the feel-good vibes under this new moon, which come through liberating yourself from expired allegiances and 'groupthink' drama. Rediscovering your voice through a hobby or form of creative self-expression highlights how inauthentic some of your standing associations have become. On another note, a fling that starts around this time could challenge what you thought relationships should look like. You're no stranger to feeling like a fish out of water, so seize the opportunities that feel right regardless of what others think.</p></div></div>
+
+<div class="sign"><div class="sign-header"><span class="sign-name">Pisces</span><span class="sign-house">Rising · 4H</span></div><div class="sign-body"><p>Around this moon, you may feel confronted with the root of insecurities around feeling unseen and unappreciated, and how they have fed recent power struggles in your career. Time spent with a family member, especially a partner or sibling, could soothe your inner child as you look back through memories. Bonds that go beyond the superficial, and sexual, are healthiest for you now.</p></div></div>
+
+<div class="footer">© Sayari Moon Astrology</div>
+
+</body>
+</html>
