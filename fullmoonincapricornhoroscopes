@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Moon in Capricorn · Sayari Moon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fbfaf8;
+      --ink: #111;
+      --muted: #888;
+      --border: #e2e2e2;
+      --deep: #1a1208;
+      --gold: #b8922a;
+      --gold-light: #d4aa4a;
+      --smoke: #2e2618;
+    }
+
+    body {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      max-width: 1000px;
+      margin: 90px auto;
+      padding: 0 28px;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .back {
+      font-family: "Playfair Display", serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 48px;
+    }
+
+    .moon-header {
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 0 20px;
+      margin-bottom: 10px;
+    }
+
+    .moon-meta {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .moon-title {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.1;
+      letter-spacing: 0.3px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .moon-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .moon-subtitle {
+      font-family: "Playfair Display", serif;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .moon-time {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin-bottom: 56px;
+      font-size: 19px;
+    }
+
+    .aspects-strip {
+      background: var(--deep);
+      color: var(--cream);
+      padding: 32px 36px;
+      margin: 0 0 56px 0;
+      max-width: 860px;
+    }
+
+    .strip-label {
+      font-family: "Playfair Display", serif;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .aspect-block {
+      margin-bottom: 28px;
+    }
+
+    .aspect-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .aspect-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .aspect-group-title {
+      font-family: "Playfair Display", serif;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+    }
+
+    .aspect-list {
+      list-style: none;
+      font-size: 16px;
+      line-height: 2;
+      color: #c8c0b0;
+      font-style: italic;
+    }
+
+    .aspect-text {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #c8c0b0;
+      font-style: italic;
+    }
+
+    .rituals {
+      margin-bottom: 72px;
+    }
+
+    .rituals-title {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .ritual-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .ritual-item {
+      font-size: 16px;
+      line-height: 1.75;
+      font-style: italic;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sign {
+      margin-bottom: 72px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sign-header {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .sign-name {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+    }
+
+    .sign-house {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .sign-body {
+      font-size: 18px;
+      line-height: 1.95;
+    }
+
+    .footer {
+      font-family: "Playfair Display", serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="back" href="index.html">← Sayari Moon</a>
+
+<div class="moon-header">
+  <h1 class="moon-title">Full Moon in <em>Capricorn</em></h1>
+  <div class="moon-subtitle">A Long Weight</div>
+</div>
+
+<div style="max-width: 720px; margin-bottom: 72px;">
+  <div class="intro" style="margin-top: 32px;">
+    <p>The Full Moon in Capricorn arrives on June 29th at 7:56 PM ET, and the energy is dry, heavy, and sobering. Emotions may feel blocked, and care is dutiful rather than free-flowing and intuitive. Something you've been laboring over for a considerable time could reach its peak whether you're ready or not. Mercury stations retrograde in Cancer on the same day, adding a layer of mental fog and emotional reckoning to an already weighted moment. You may find yourself down in the dumps, riddled with guilt, or tempted to numb out or escape a feeling that is too real. Surrender to having a humdrum day if it hits.</p>
+    <br>
+    <p>This moon squares Capricorn's ruler, Saturn, and Neptune in Aries, creating a push-pull between sobering reality and murky confusion that inhibits forward motion. A contraparallel to Pluto adds a certain vibrato…you may find yourself pushed beyond your depth and obligated to something you didn't fully understand at the time. The invitation is to focus on what you can actually manage right now and reclaim the rest of your time. An emotional burden may be ready to shift, but only if you're willing to acknowledge the pieces you cannot carry alone.</p>
+    <br>
+    <p>A soft trine to the South Node in Virgo facilitates loosening the grip on a habit, duty, or state of hypervigilance.</p>
+    <br>
+    <p>Let's break it down…</p>
+  </div>
+
+  <div class="aspects-strip">
+    <div class="strip-label">The Astrology</div>
+
+    <div class="aspect-block">
+      <div class="aspect-group-title">Frustration</div>
+      <div class="aspect-row">
+        <ul class="aspect-list">
+          <li>Square Saturn in Aries</li>
+          <li>Square Neptune in Aries</li>
+          <li>Contraparallel Pluto</li>
+        </ul>
+        <div class="aspect-text">
+          Emotions feel blocked or heavier than usual, and the source of the weight may be hard to pinpoint. Confusion or guilt makes it difficult to act, plan, or accept what you feel. Confidence dips after a sudden realization, and the temptation to numb or escape is real.
+        </div>
+      </div>
+    </div>
+
+    <div class="aspect-block">
+      <div class="aspect-group-title">Opportunity</div>
+      <div class="aspect-row">
+        <ul class="aspect-list">
+          <li>Trine South Node in Virgo</li>
+        </ul>
+        <div class="aspect-text">
+          Reality cuts through sentiment. If something feels heavier than it should, that's information. An emotional burden that has been lingering may finally start to lift, even if the details of how and when aren't ironed out.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rituals">
+    <div class="rituals-title">Capricorn Full Moon Tiny Ritual Ideas</div>
+    <div class="ritual-list">
+      <div class="ritual-item">Pour a stiff drink. Ideally, gin or anything with a bite, but know and honor your limit. And don't forget to pour one out for the ancestors.</div>
+      <div class="ritual-item">Do exercises that strengthen your knees, such as squats or deadlifts (being mindful to protect them at the same time).</div>
+      <div class="ritual-item">Write an apology letter to yourself for biting off more than you could chew in the relevant area of life.</div>
+      <div class="ritual-item">Thank someone who has picked up the burdens you couldn't bear alone.</div>
+      <div class="ritual-item">Reflect on accomplishments you still haven't celebrated (but should) and where you still feel unsatisfied or unfulfilled.</div>
+    </div>
+  </div>
+
+  <p style="font-family: 'Playfair Display', serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 56px;">The following horoscopes are written for Rising signs but relevant for Sun & Moon signs based on derived houses.</p>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Aries</span><span class="sign-house">Rising · 10H</span></div>
+    <div class="sign-body"><p>An important matter related to your career, reputation, or an investment in your future may surface under this moon. You could feel a disconnect in the image you project to the world and how you perceive yourself. If you've been withdrawn inside your personal life lately, there may be a disruption that pushes you back into the limelight, maybe before you're ready to leave your cocoon. If you get put on the spot, trust in your muscle memory. Mercury retrograde in Cancer is a time for you to revisit your idea of home and family and how that has expanded over the last year.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Taurus</span><span class="sign-house">Rising · 9H</span></div>
+    <div class="sign-body"><p>You may be more ready than you feel for the change you've been resisting. This full moon may push you into unfamiliar terrain, triggering latent fears that work against your expansion. The negative self-talk isn't coming from nowhere. Learning to navigate this pressure by opening up to spiritual or psychological analysis can help clear the channel, especially as an evolution in your public persona slowly unravels. Mercury retrograde in Cancer is an opportunity to get back to basics, but with your more expanded perspective: reconnect with family members, clear up misunderstandings in caring relationships, and take note of the stories you repeat, so the evolution can do what it's supposed to.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Gemini</span><span class="sign-house">Rising · 8H</span></div>
+    <div class="sign-body"><p>Your outlook on the world may be glum today, especially if you are burdened with taxes or debts that seem particularly unjust. Financial obligations and compensation are in focus now, so if there is an arrangement that lacks reciprocity, you'll likely start to reconsider it. Mercury retrograde in Cancer is inviting you to review your income-to-debt ratio, compensation packages, and overall budget so that you can shed any dead weight. This three-week grounding practice will also help you demystify the process of realizing dreams of independence or a long-held goal that still feels out of reach.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Cancer</span><span class="sign-house">Rising · 7H</span></div>
+    <div class="sign-body"><p>A revelation around a key partnership or contract may carry a certain heaviness under this moon. It could feel like this relationship is holding up career goals and forcing you to choose between yourself and it. Instead of playing tug of war, resist the urge to force a resolution now. Mercury retrograde in your sign means that you are called into a process of self-review and reflection. Your identity, including how you are perceived, is going through a restructuring process, and you may soon experience a mental shift that brings more clarity into what is troubling you in the current moment. Patience with yourself and others is a powerful tool right now.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Leo</span><span class="sign-house">Rising · 6H</span></div>
+    <div class="sign-body"><p>An undesirable habit or coping mechanism may be easier to phase out under this moon. This could be inspired by witnessing a powerful transformation in someone close. It could also trigger a comparison reflex, so be mindful of competition with a frenemy or a group holding power over you. Your competition is your former self, so celebrate positive changes within you instead of measuring yourself against others. Mercury retrograde in Cancer invites you to reexamine the emotional burdens you've been carrying on behalf of a collective idea that no longer resonates with your personal journey.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Virgo</span><span class="sign-house">Rising · 5H</span></div>
+    <div class="sign-body"><p>You may long for closure surrounding a fling or friendship under this moon. Teetering the line between platonic and romantic isn't sustainable. Something has to give. Barriers to intimacy, trust, or financial security could be contributing to the restricted flow you're experiencing. A creative project or plans involving children may also find themselves on pause for similar reasons. Mercury retrograde in Cancer will prompt a reflection about your network and future goals. Who do you want alongside you for this next journey? Someone you hoped to collab with may back out, but you'll probably find out later that it was a blessing in disguise.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Libra</span><span class="sign-house">Rising · 4H</span></div>
+    <div class="sign-body"><p>Duty calls on the home front under this moon. Your attention may wish to remain on career goals, but family matters take precedence. A partner requires extra help or reprieve, or a property issue requires resolution. Mercury retrograde in Cancer is asking you what career changes will restore work-life balance at this time. It may result in a short delay in a conversation or postponement of an opportunity to be noticed and potentially promoted. This is a good opportunity to catch any hidden issues or clear up any questions before signing a contract.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Scorpio</span><span class="sign-house">Rising · 3H</span></div>
+    <div class="sign-body"><p>Taking care of business now makes for more relaxation later. You may be involved in extra training or studying to support your career goals while home or family obligations linger in the background. Juggling responsibilities while longing for vacation mode is a serious struggle under this moon. If your mind is on the long to-do list, wondering how to make it all happen by your deadline, don't try to figure it all out now. The more you push the answer, the murkier the situation gets. Mercury retrograde in Cancer provides an extra three weeks to rework plans for studies, travel, and reenvisioning your long-term goals. Do what you can do for now and allow your mind to focus on something else before your cup runs dry.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Sagittarius</span><span class="sign-house">Rising · 2H</span></div>
+    <div class="sign-body"><p>Pressure to stick to a script or stay loyal to what or who is familiar (including family) may start to release under this moon. You could realize that some restrictions you feel around your capacity to earn are self-imposed. You'll have to learn how to trust yourself and key players again, and this Mercury retrograde in Cancer is the perfect opportunity to release and relearn your relationship to power and your approach to receiving. A significant person may return, or you might need to revisit a contract, but there is an inclination to overthink or avoid, especially if the details are of the sobering, killjoy variety. This is the time to clean up debts, purge hidden toxicity in your money habits, and unbind yourself from draining financial obligations.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Capricorn</span><span class="sign-house">Rising · 1H</span></div>
+    <div class="sign-body"><p>The work you've been doing to transform your self-worth and prioritize your needs may be tested around this moon as you are focused on the healing or recovery of someone near to you. They could serve as a mirror, reminding you of personal goals, particularly around your health or presentation, that you let fall to the wayside in order to prop them up. If you've been sacrificing too much for others, Mercury retrograde in Cancer is going to challenge you to reestablish boundaries, especially in your closest relationships. Showing up for those you care about doesn't mean letting yourself go. You may need to release self-sacrificial behavior and return to tending yourself.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Aquarius</span><span class="sign-house">Rising · 12H</span></div>
+    <div class="sign-body"><p>You're in the process of a slow, yet powerful self-transformation, and the changes are coming from the inside out. This may have put you in overdrive, making you more likely to overestimate your productivity. A lifestyle-induced health concern could be what finally gets your attention, especially related to idiopathic conditions. Overworking may have caused you to neglect your daily routine or health regimen. Mercury retrograde in Cancer is the perfect time to restart fitness routines, schedule routine check-ups, and reinstate healthy habits. Schedule that R&R if your routine has become unsustainable.</p></div>
+  </div>
+
+  <div class="sign">
+    <div class="sign-header"><span class="sign-name">Pisces</span><span class="sign-house">Rising · 11H</span></div>
+    <div class="sign-body"><p>Nostalgia around friendship or romance may put you back in a social mood under this moon. However, uncertainty around personal finances or the value of the connections themselves causes cognitive dissonance. You may have been feeling isolated now as you work through profound personal healing, muddying your trust in groups and the concept of community. Leaning into creativity and play can help ease this burden and help you heal while expanding your social sphere in a way that feels comfortable. Mercury retrograde in Cancer is your invitation to return to a sense of playfulness with someone who cheers you up while allowing you to truly be yourself.</p></div>
+  </div>
+
+</div>
+
+<div class="footer">© Sayari Moon Astrology</div>
+
+</body>
+</html>
